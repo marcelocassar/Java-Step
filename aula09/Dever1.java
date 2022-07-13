@@ -1,6 +1,5 @@
 package aula09;
 
-import java.util.Iterator;
 import java.util.Scanner;
 
 public class Dever1 {
@@ -22,10 +21,18 @@ public class Dever1 {
 		email = ler.nextLine();
 
 		nome = formatarTexto(nome);
+		email = formatarTexto(email);
 		
 		if (validarNome(nome) == false) {
 			System.out.println("Você digitou caractéres inválidos, no nome.");
 		} 
+		
+		if (validarNome(email) == false) {
+			System.out.println("Você digitou caractéres inválidos, no e-mail.");
+		} 
+						
+		
+		ler.close();
 
 	}
 
@@ -46,6 +53,7 @@ public class Dever1 {
 	}
 
 	public static boolean validarNome(String texto) {
+		
 //		Verifique se o nome contém caracteres inválidos.	
 //		Lista de alguns caracteres inválidos:  ç ~  ã õ - /  | \ # $ % ¨&  *  (   )  + =.
 		int contInvalidos = 0;
